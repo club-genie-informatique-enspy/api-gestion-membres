@@ -1,0 +1,115 @@
+[
+    {
+        "name": "Organization",
+        "attributes": [
+            {"visibility": "public", "name": "name", "_type": "string"},
+            {"visibility": "public", "name": "password", "_type": "string"},
+            {"visibility": "public", "name": "emailAddress", "_type": "string"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "User",
+        "attributes": [
+            {"visibility": "public", "name": "roleId", "_type": "UUID"},
+            {"visibility": "public", "name": "password", "_type": "string"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "Meeting",
+        "attributes": [
+            {"visibility": "public", "name": "label", "_type": "string"},
+            {"visibility": "public", "name": "description", "_type": "string"},
+            {"visibility": "public", "name": "date", "_type": "Date"},
+            {"visibility": "public", "name": "duration", "_type": "number"},
+            {"visibility": "public", "name": "owner", "_type": "string"},
+            {"visibility": "public", "name": "userId", "_type": "UUID"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "Subscription",
+        "attributes": [
+            {"visibility": "public", "name": "label", "_type": "string"},
+            {"visibility": "public", "name": "description", "_type": "string"},
+            {"visibility": "public", "name": "rising", "_type": "number"},
+            {"visibility": "public", "name": "startDate", "_type": "Date"},
+            {"visibility": "public", "name": "endDate", "_type": "Date"},
+            {"visibility": "public", "name": "frequency", "_type": "string"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "Role",
+        "attributes": [
+            {"visibility": "public", "name": "name", "_type": "string"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "Member",
+        "attributes": [
+            {"visibility": "public", "name": "name", "_type": "string"},
+            {"visibility": "public", "name": "surname", "_type": "string"},
+            {"visibility": "public", "name": "email", "_type": "string"},
+            {"visibility": "public", "name": "phone", "_type": "string"},
+            {"visibility": "public", "name": "dateOfBirth", "_type": "Date"},
+            {"visibility": "public", "name": "departmentId", "_type": "UUID"},
+            {"visibility": "public", "name": "level", "_type": "string"},
+            {"visibility": "public", "name": "organizationId", "_type": "UUID"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "LinkSubscription",
+        "attributes": [
+            {"visibility": "public", "name": "subscriptionId", "_type": "UUID"},
+            {"visibility": "public", "name": "memberId", "_type": "UUID"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "Department",
+        "attributes": [
+            {"visibility": "public", "name": "name", "_type": "string"},
+            {"visibility": "public", "name": "code", "_type": "string"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    },
+    {
+        "name": "LinkMeeting",
+        "attributes": [
+            {"visibility": "public", "name": "subscriptionId", "_type": "UUID"},
+            {"visibility": "public", "name": "memberId", "_type": "UUID"}
+        ],
+        "methods": [],
+        "aggregations": [],
+        "compositions": [],
+        "parent": null
+    }
+]
