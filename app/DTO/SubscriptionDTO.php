@@ -11,7 +11,7 @@ readonly class SubscriptionDTO
     public function __construct(
         public? string $label,
         public? string $description,
-        public? number $rising,
+        public? int $rising,
         public? \DateTimeInterface $startDate,
         public? \DateTimeInterface $endDate,
         public? string $frequency,

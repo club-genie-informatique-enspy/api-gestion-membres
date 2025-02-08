@@ -17,7 +17,8 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'roleId' => fake()->uuid(),
+            'role_id' => \App\Models\Role::inRandomOrder()->value('id'),
+            'email'=>fake()->unique()->email(),
             'password' => fake()->word()
         ];
     }

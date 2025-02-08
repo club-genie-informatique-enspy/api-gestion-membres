@@ -22,9 +22,9 @@ class MemberFactory extends Factory
             'email' => fake()->word(),
             'phone' => fake()->word(),
             'dateOfBirth' => fake()->word(),
-            'departmentId' => fake()->uuid(),
+            'department_id' => \App\Models\Department::inRandomOrder()->value('id'),
             'level' => fake()->word(),
-            'organizationId' => fake()->uuid()
+            'organization_id' => \App\Models\Organization::inRandomOrder()->value('id')
         ];
     }
 }

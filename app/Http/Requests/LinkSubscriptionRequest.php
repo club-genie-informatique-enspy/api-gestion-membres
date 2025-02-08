@@ -22,9 +22,9 @@ class LinkSubscriptionRequest extends FormRequest
     public function rules()
     {
         return [
-            'subscriptionId' => 'uuid',
-            'memberId' => 'uuid',
-            
+            'subscription_id' => 'uuid',
+            'member_id' => 'uuid',
+
         ];
     }
 }

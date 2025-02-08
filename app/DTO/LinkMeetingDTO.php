@@ -9,16 +9,16 @@ readonly class LinkMeetingDTO
 {
 
     public function __construct(
-        public? string $subscriptionId,
-        public? string $memberId,
+        public? string $subscription_id,
+        public? string $member_id,
 
     ) {}
 
     public static function fromRequest(LinkMeetingRequest $request): self
     {
         return new self(
-            subscriptionId : $request->get('subscriptionId'),
-            memberId : $request->get('memberId'),
+            subscription_id : $request->get('subscription_id'),
+            member_id : $request->get('member_id'),
 
         );
     }

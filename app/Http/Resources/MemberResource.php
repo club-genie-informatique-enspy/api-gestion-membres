@@ -16,15 +16,16 @@ class MemberResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'name' => $this->name,
             'surname' => $this->surname,
             'email' => $this->email,
             'phone' => $this->phone,
             'dateOfBirth' => $this->dateOfBirth,
-            'departmentId' => $this->departmentId,
+            'department_id' => $this->department_id,
             'level' => $this->level,
-            'organizationId' => $this->organizationId,
-            
+            'organization_id' => $this->organization_id,
+
         ];
     }
 }

@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class LinkSubscription extends Model
 {
-    protected $fillable = ['subscriptionId', 'memberId'];
+    use HasUuids;
+    protected $keyType = 'string';
+    public $incrementing = false;
+    protected $fillable = ['subscription_id', 'member_id'];
 
     /** @use HasFactory<\Database\Factories\LinkSubscriptionFactory> */
     use HasFactory;

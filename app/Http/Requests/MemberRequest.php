@@ -26,11 +26,11 @@ class MemberRequest extends FormRequest
             'surname' => 'string|max:255',
             'email' => 'string|max:255',
             'phone' => 'string|max:255',
-            'dateOfBirth' => 'required',
-            'departmentId' => 'uuid',
+            'dateOfBirth' => 'required|date',
+            'department_id' => 'uuid',
             'level' => 'string|max:255',
-            'organizationId' => 'uuid',
-            
+            'organization_id' => 'uuid',
+
         ];
     }
 }

@@ -16,10 +16,11 @@ class OrganizationResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'name' => $this->name,
             'password' => $this->password,
             'emailAddress' => $this->emailAddress,
-            
+
         ];
     }
 }

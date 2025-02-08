@@ -24,11 +24,11 @@ class SubscriptionRequest extends FormRequest
         return [
             'label' => 'string|max:255',
             'description' => 'string|max:255',
-            'rising' => 'required',
-            'startDate' => 'required',
-            'endDate' => 'required',
+            'rising' => 'required|integer',
+            'startDate' => 'required|date',
+            'endDate' => 'required|date',
             'frequency' => 'string|max:255',
-            
+
         ];
     }
 }

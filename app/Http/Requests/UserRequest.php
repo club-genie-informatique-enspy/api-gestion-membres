@@ -22,9 +22,9 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'roleId' => 'uuid',
+            'role_id' => 'uuid',
             'password' => 'string|max:255',
-            
+
         ];
     }
 }

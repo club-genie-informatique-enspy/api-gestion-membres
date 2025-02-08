@@ -9,7 +9,7 @@ readonly class UserDTO
 {
 
     public function __construct(
-        public? string $roleId,
+        public? string $role_id,
         public? string $password,
 
     ) {}
@@ -17,7 +17,7 @@ readonly class UserDTO
     public static function fromRequest(UserRequest $request): self
     {
         return new self(
-            roleId : $request->get('roleId'),
+            role_id : $request->get('role_id'),
             password : $request->get('password'),
 
         );

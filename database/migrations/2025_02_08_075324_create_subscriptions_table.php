@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('subscriptions', function (Blueprint $table) {
-            $table->uuid();
+            $table->uuid("id")->primary();
             $table->string('label')->nullable();
             $table->string('description')->nullable();
-            $table->string('rising')->nullable();
-            $table->string('startDate')->nullable();
-            $table->string('endDate')->nullable();
+            $table->integer('rising')->nullable();
+            $table->date('startDate')->nullable();
+            $table->date('endDate')->nullable();
             $table->string('frequency')->nullable();
             $table->timestamps();
         });

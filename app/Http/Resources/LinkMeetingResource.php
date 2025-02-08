@@ -16,9 +16,10 @@ class LinkMeetingResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'subscriptionId' => $this->subscriptionId,
-            'memberId' => $this->memberId,
-            
+            'id' => $this->id,
+            'subscription_id' => $this->subscription_id,
+            'member_id' => $this->member_id,
+
         ];
     }
 }

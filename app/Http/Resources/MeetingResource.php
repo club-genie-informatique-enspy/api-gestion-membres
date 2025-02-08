@@ -16,13 +16,14 @@ class MeetingResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'label' => $this->label,
             'description' => $this->description,
             'date' => $this->date,
             'duration' => $this->duration,
             'owner' => $this->owner,
-            'userId' => $this->userId,
-            
+            'user_id' => $this->user_id,
+
         ];
     }
 }

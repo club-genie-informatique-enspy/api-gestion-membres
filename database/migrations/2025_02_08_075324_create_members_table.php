@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Department;
+use App\Models\Organization;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,15 +14,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->uuid();
+            $table->uuid("id")->primary();
             $table->string('name')->nullable();
             $table->string('surname')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('dateOfBirth')->nullable();
-            $table->uuid('departmentId')->nullable();
+            $table->date('dateOfBirth')->nullable();
+            $table->foreignIdFor(Department::class)->nullable();
             $table->string('level')->nullable();
-            $table->uuid('organizationId')->nullable();
+            $table->foreignIdFor(Organization::class)->nullable();
             $table->timestamps();
         });
     }

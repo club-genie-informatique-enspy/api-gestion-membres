@@ -22,7 +22,7 @@ class MeetingFactory extends Factory
             'date' => fake()->word(),
             'duration' => fake()->word(),
             'owner' => fake()->word(),
-            'userId' => fake()->uuid()
+            'user_id' => \App\Models\User::inRandomOrder()->value('id')
         ];
     }
 }

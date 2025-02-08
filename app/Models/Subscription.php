@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Subscription extends Model
 {
+    use HasUuids;
+    protected $keyType = 'string';
+    public $incrementing = false;
     protected $fillable = ['label', 'description', 'rising', 'startDate', 'endDate', 'frequency'];
 
     /** @use HasFactory<\Database\Factories\SubscriptionFactory> */

@@ -17,8 +17,8 @@ class LinkSubscriptionFactory extends Factory
     public function definition(): array
     {
         return [
-            'subscriptionId' => fake()->uuid(),
-            'memberId' => fake()->uuid()
+            'subscription_id' => \App\Models\Subscription::inRandomOrder()->value('id'),
+            'member_id' => \App\Models\Member::inRandomOrder()->value('id')
         ];
     }
 }

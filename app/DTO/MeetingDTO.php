@@ -12,9 +12,9 @@ readonly class MeetingDTO
         public? string $label,
         public? string $description,
         public? \DateTimeInterface $date,
-        public? number $duration,
+        public? int $duration,
         public? string $owner,
-        public? string $userId,
+        public? string $user_id,
 
     ) {}
 
@@ -26,7 +26,7 @@ readonly class MeetingDTO
             date : $request->get('date'),
             duration : $request->get('duration'),
             owner : $request->get('owner'),
-            userId : $request->get('userId'),
+            user_id : $request->get('user_id'),
 
         );
     }

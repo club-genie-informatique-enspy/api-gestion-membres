@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Member;
+use App\Models\Subscription;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,9 +14,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('link_meetings', function (Blueprint $table) {
-            $table->uuid();
-            $table->uuid('subscriptionId')->nullable();
-            $table->uuid('memberId')->nullable();
+            $table->uuid("id")->primary();
+            $table->foreignIdFor(Subscription::class)->nullable();
+            $table->foreignIdFor(Member::class)->nullable();
             $table->timestamps();
         });
     }

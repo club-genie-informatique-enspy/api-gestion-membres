@@ -16,13 +16,14 @@ class SubscriptionResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'label' => $this->label,
             'description' => $this->description,
             'rising' => $this->rising,
             'startDate' => $this->startDate,
             'endDate' => $this->endDate,
             'frequency' => $this->frequency,
-            
+
         ];
     }
 }

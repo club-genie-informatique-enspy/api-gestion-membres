@@ -24,11 +24,11 @@ class MeetingRequest extends FormRequest
         return [
             'label' => 'string|max:255',
             'description' => 'string|max:255',
-            'date' => 'required',
-            'duration' => 'required',
+            'date' => 'required|date',
+            'duration' => 'required|integer',
             'owner' => 'string|max:255',
-            'userId' => 'uuid',
-            
+            'user_id' => 'uuid',
+
         ];
     }
 }
